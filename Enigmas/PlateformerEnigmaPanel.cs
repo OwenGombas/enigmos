@@ -19,6 +19,7 @@ namespace Cpln.Enigmos.Enigmas
             // Taille du jeu
             Width = 1500;
             Height = 900;
+            DoubleBuffered = true;
 
             // Evenements
             Paint += PlateformerEnigmaPanel_Paint;
@@ -133,8 +134,8 @@ namespace Cpln.Enigmos.Enigmas
         // Active le timer quand le jeu est affiché et remet le joueur au point de départ
         public override void Load()
         {
-            _hero.Dead();
             _tmr.Start();
+            _hero.Dead();
         }
 
         // Stop le timer quand l'énigme n'est plus affichée
